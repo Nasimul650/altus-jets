@@ -4,7 +4,7 @@ import { useRef } from 'react';
 
 export default function Benefits() {
   const containerRef = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
+  useScroll({
     target: containerRef,
     offset: ["start end", "end start"]
   });
@@ -54,7 +54,7 @@ export default function Benefits() {
   );
 }
 
-function BenefitCard({ title, desc, index, total }: { title: string, desc: string, index: number, total: number }) {
+function BenefitCard({ title, desc, index }: { title: string, desc: string, index: number, total: number }) {
   const cardRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: cardRef,
