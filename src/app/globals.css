@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  background-color: #050505;
+  color: #ffffff;
+  overscroll-behavior: none; /* Prevents bounce effect on Mac */
+}
+
+/* Hide scrollbar for immersive feel */
+::-webkit-scrollbar {
+  display: none;
+}

@@ -1,0 +1,43 @@
+﻿
+> jesko-clone@0.1.0 lint
+> next lint
+
+node.exe : 
+At line:1 char:1
++ & "C:\Program 
+Files\nodejs/node.exe" 
+"C:\Program 
+Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo      
+        : NotSpecified  
+  : (:String) [], Rem   
+ oteException
+    + FullyQualifiedErr 
+   orId : NativeComman  
+  dError
+ 
+./src/hooks/useCanvasScr
+oll.ts
+17:13  Error: 
+'resizeObserver' is 
+defined but never used. 
+ @typescript-eslint/no-u
+nused-vars
+
+./src/hooks/useImagePrel
+oader.ts
+9:13  Error: 
+'loadedCount' is 
+assigned a value but 
+never used.  @typescript
+-eslint/no-unused-vars
+
+info  - Need to disable 
+some ESLint rules? 
+Learn more here: https:/
+/nextjs.org/docs/basic-f
+eatures/eslint#disabling
+-rules
