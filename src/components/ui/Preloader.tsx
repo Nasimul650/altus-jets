@@ -37,7 +37,7 @@ export default function Preloader() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-2xl md:text-4xl font-semibold tracking-wide mb-4"
             >
-              Jesko Jets
+              Altus Jets
             </motion.div>
             <motion.div
               initial={{ y: 20, opacity: 0 }}

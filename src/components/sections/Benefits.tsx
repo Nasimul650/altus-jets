@@ -29,7 +29,7 @@ export default function Benefits() {
   ];
 
   return (
-    <section id="benefits" className="relative w-full bg-[#050505] text-white pt-48 pb-24 md:pt-64 md:pb-48 px-6 md:px-12 border-t border-white/10">
+    <section id="benefits" className="relative w-full bg-[#050505] text-white pt-48 pb-24 md:pt-64 md:pb-48 px-6 md:px-12">
       <div className="max-w-[1920px] mx-auto z-10 relative">
          
          {/* Title Area */}

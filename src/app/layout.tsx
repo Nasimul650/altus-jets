@@ -5,7 +5,7 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Jesko Jets | The Sky Is No Longer The Limit',
+  title: 'Altus Jets | The Sky Is No Longer The Limit',
   description: 'Premium cinematic flight experience.',
 };
 

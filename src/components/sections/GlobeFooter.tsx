@@ -76,8 +76,8 @@ export default function GlobeFooter() {
                <h4 className="text-sm tracking-widest uppercase mb-12 text-white/50">For inquiries</h4>
 
                <div className="flex flex-col gap-8 text-2xl md:text-4xl tracking-tight font-sans">
-                  <a href="mailto:info@jeskojets.com" className="hover:text-white/70 transition-colors group flex items-center gap-4">
-                     info@jeskojets.com
+                  <a href="mailto:info@altusjets.com" className="hover:text-white/70 transition-colors group flex items-center gap-4">
+                     info@altusjets.com
                      <span className="opacity-0 group-hover:opacity-100 transition-opacity translate-x-[-10px] group-hover:translate-x-0 duration-300">→</span>
                   </a>
                   <a href="tel:+971544325050" className="hover:text-white/70 transition-colors group flex items-center gap-4">
@@ -92,7 +92,7 @@ export default function GlobeFooter() {
       {/* Bottom Legal / Credits */}
       <div className="max-w-[1920px] mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center justify-between gap-6 text-xs text-white/50 tracking-widest uppercase font-sans border-t border-white/10 pt-8 z-10 relative">
         <div className="flex flex-col md:flex-row gap-4 md:gap-8 text-center md:text-left">
-          <span>© 2026 Jesko Jets. All rights reserved</span>
+          <span>© 2026 Altus Jets. All rights reserved</span>
           <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
         </div>
         <div className="flex items-center gap-2">

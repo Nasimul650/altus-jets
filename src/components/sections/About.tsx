@@ -23,7 +23,7 @@ export default function About() {
             className="lg:col-span-8 lg:col-start-2"
           >
             <h2 className="text-3xl md:text-5xl lg:text-7xl font-sans tracking-tight leading-tight mb-12">
-              <span className="text-white/50">Jesko Jets® is a private aviation operator with over </span>
+              <span className="text-white/50">Altus Jets® is a private aviation operator with over </span>
               5,000 missions completed across 150+ countries. 
               <span className="text-white/50"> From international executives to global industries, our clients trust us to deliver on time, every time.</span>
             </h2>
@@ -51,11 +51,11 @@ export default function About() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mt-32 border-t border-white/20 pt-16">
           <FeatureCard 
             title="Direct Access to Private Travel"
-            desc="Fly beyond boundaries with Jesko Jets. Our global operations ensure seamless, personalized travel experiences — from the first call to landing. Every journey is tailored to your comfort, privacy, and schedule."
+            desc="Fly beyond boundaries with Altus Jets. Our global operations ensure seamless, personalized travel experiences — from the first call to landing. Every journey is tailored to your comfort, privacy, and schedule."
           />
           <FeatureCard 
             title="Your Freedom to Enjoy Life"
-            desc="We value your time above all. Jesko Jets gives you the freedom to live, work, and relax wherever life takes you — without compromise."
+            desc="We value your time above all. Altus Jets gives you the freedom to live, work, and relax wherever life takes you — without compromise."
           />
           <FeatureCard 
             title="Precision and Excellence"
@@ -63,7 +63,7 @@ export default function About() {
           />
           <FeatureCard 
             title="Global Reach, Personal Touch"
-            desc="With access to destinations in over 150 countries, Jesko Jets brings the world closer to you. Our experts manage every aspect of your flight, guaranteeing a smooth and effortless journey."
+            desc="With access to destinations in over 150 countries, Altus Jets brings the world closer to you. Our experts manage every aspect of your flight, guaranteeing a smooth and effortless journey."
           />
         </div>
 
