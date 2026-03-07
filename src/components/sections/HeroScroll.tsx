@@ -40,29 +40,53 @@ export default function HeroScroll({ children }: { children?: React.ReactNode })
         <div className="sticky top-0 h-screen w-full overflow-hidden pointer-events-none">
           <motion.div 
             style={{ opacity: textOpacity, y: textY }}
-            className="absolute inset-0 z-10 flex flex-col items-center justify-center w-full max-w-[1920px] mx-auto px-6 md:px-12 pb-32"
+            className="absolute inset-0 z-10 w-full max-w-[1720px] mx-auto px-6 md:px-12 pointer-events-auto"
           >
-           {/* Top Title */}
-           <div className="w-full flex flex-col items-start lg:flex-row lg:justify-between text-white font-sans mt-32 md:mt-48">
-              <h1 className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl tracking-tight leading-[1.1]">We are movement</h1>
-              <h2 className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl tracking-tight leading-[1.1] mt-2 lg:mt-0 text-right w-full lg:w-auto text-white/90">We are distinction</h2>
-           </div>
+            {/* Center Background Text */}
+            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+              <span className="text-white text-3xl md:text-5xl tracking-[0.2em] font-light transform -translate-y-8 uppercase">Altus Jets</span>
+            </div>
 
-           {/* Bottom Description */}
-           <div className="w-full mt-auto mb-24 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 border-t border-white/20 pt-8">
-              <div className="lg:col-span-3">
-                 <h3 className="text-xl leading-relaxed text-white font-sans">Your <br/>freedom to enjoy life</h3>
+            <div className="h-full flex flex-col justify-between pt-40 md:pt-56 pb-12 md:pb-16 relative">
+              {/* Top Title Section */}
+              <div className="w-full flex justify-between items-center text-white font-sans shrink-0 pointer-events-none">
+                <h1 className="text-6xl md:text-8xl lg:text-[110px] tracking-tighter leading-[0.9] font-medium z-10">We are<br/>movement</h1>
+                <h2 className="text-6xl md:text-8xl lg:text-[110px] tracking-tighter leading-[0.9] font-medium text-right z-10">We are<br/>distinction</h2>
               </div>
-              <div className="lg:col-span-5 lg:col-start-5">
-                 <p className="text-sm md:text-base leading-relaxed text-white/70 font-sans max-w-md">Every flight is designed around your comfort, time, and ambitions — so you can focus on what truly matters, while we take care of everything else.</p>
+
+              {/* Bottom Description */}
+              <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-8 items-end relative z-10">
+                {/* Left Bottom */}
+                <div className="lg:col-span-4 flex flex-col gap-6 font-sans">
+                  <h3 className="text-2xl md:text-[32px] font-medium leading-tight text-white mb-2">Your<br/>freedom to<br/>enjoy life</h3>
+                  <div className="w-8 h-[1px] bg-white"></div>
+                  <p className="text-xs md:text-[13px] leading-[1.8] text-white font-semibold max-w-[320px]">
+                    Every flight is designed around your comfort, time, and ambitions — so you can focus on what truly matters, while we take care of everything else.
+                  </p>
+                </div>
+
+                {/* Center Buttons removed for floating button */}
+
+                {/* Right Bottom */}
+                <div className="lg:col-span-4 lg:col-start-9 flex flex-col justify-end w-full pb-8">
+                  <div className="w-full h-[1px] bg-white/40 mb-6"></div>
+                  <div className="flex justify-between items-center text-[10px] tracking-widest uppercase font-bold text-white font-sans w-full">
+                    <button 
+                      onClick={() => {
+                        const el = document.getElementById('about');
+                        if (el) el.scrollIntoView({ behavior: 'smooth' });
+                      }}
+                      className="flex items-center gap-2 hover:text-white/70 transition-colors"
+                    >
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="animate-bounce"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                      SCROLL DOWN
+                    </button>
+                    <span>TO START THE JOURNEY</span>
+                  </div>
+                </div>
               </div>
-              <div className="lg:col-span-2 lg:col-start-11 flex flex-col items-end justify-center text-xs tracking-widest uppercase text-white/50 text-right">
-                 <div className="w-[1px] h-12 bg-white/30 mb-4 animate-pulse"></div>
-                 <span>Scroll down</span>
-                 <span>To start the journey</span>
-              </div>
-           </div>
-        </motion.div>
+            </div>
+          </motion.div>
         </div>
       </section>
 

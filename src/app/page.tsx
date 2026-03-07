@@ -1,3 +1,4 @@
+import FloatingBookButton from '@/components/layout/FloatingBookButton';
 import SmoothScroll from '@/components/layout/SmoothScroll';
 import About from '@/components/sections/About';
 import Benefits from '@/components/sections/Benefits';
@@ -16,6 +17,7 @@ export default function Home() {
         <Benefits />
         <GlobeFooter />
       </SmoothScroll>
+      <FloatingBookButton />
     </main>
   );
 }

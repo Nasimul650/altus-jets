@@ -39,9 +39,9 @@ export default function GlobeFooter() {
       {/* Top Title Marquee Area */}
       <div className="w-full pt-16 pb-24 relative border-b border-white/10 z-10 bg-gradient-to-b from-[#050505] to-transparent">
          <div className="flex flex-col items-center justify-center relative">
-            <h2 className="text-5xl md:text-7xl lg:text-9xl font-sans tracking-tight mb-16 uppercase">Fly anywhere</h2>
+            <h2 className="text-4xl md:text-6xl lg:text-8xl font-sans tracking-tight mb-16 uppercase">Fly anywhere</h2>
             
-            <div className="w-full overflow-hidden flex flex-col gap-6 opacity-40 font-sans text-2xl md:text-4xl tracking-tight whitespace-nowrap">
+            <div className="w-full overflow-hidden flex flex-col gap-6 opacity-40 font-sans text-xl md:text-3xl tracking-tight whitespace-nowrap">
                 <motion.div style={{ x: x1 }} className="flex gap-12">
                    {[...citiesRow1, ...citiesRow1, ...citiesRow1].map((city, i) => (
                      <span key={i}>{city}</span>
@@ -64,8 +64,8 @@ export default function GlobeFooter() {
       {/* Middle Contact Section */}
       <div className="max-w-[1920px] mx-auto px-6 md:px-12 mt-24 mb-24 z-10 relative">
          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
-            <div className="lg:col-span-8">
-               <h3 className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl tracking-tight leading-[1] font-sans">
+             <div className="lg:col-span-8">
+               <h3 className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl tracking-tight leading-[1] font-sans">
                  <span className="text-white/40 block mb-4">5K+ flights</span>
                  Fly anywhere with <br/> total comfort <br/> and control
                </h3>
@@ -73,9 +73,9 @@ export default function GlobeFooter() {
             
             <div className="lg:col-span-4 flex flex-col mt-12 lg:mt-0">
                <div className="w-full h-[1px] bg-white/20 mb-12"></div>
-               <h4 className="text-sm tracking-widest uppercase mb-12 text-white/50">For inquiries</h4>
+               <h4 className="text-xs md:text-sm tracking-widest uppercase mb-12 text-white/50">For inquiries</h4>
 
-               <div className="flex flex-col gap-8 text-2xl md:text-4xl tracking-tight font-sans">
+               <div className="flex flex-col gap-8 text-xl md:text-3xl tracking-tight font-sans">
                   <a href="mailto:info@altusjets.com" className="hover:text-white/70 transition-colors group flex items-center gap-4">
                      info@altusjets.com
                      <span className="opacity-0 group-hover:opacity-100 transition-opacity translate-x-[-10px] group-hover:translate-x-0 duration-300">→</span>
