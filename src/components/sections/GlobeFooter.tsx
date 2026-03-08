@@ -47,7 +47,8 @@ export default function GlobeFooter() {
               autoPlay 
               loop 
               muted 
-              playsInline 
+              playsInline
+              controlsList="nodownload"
               className="w-full max-w-[1200px] h-auto object-cover"
               style={{
                 maskImage: 'radial-gradient(ellipse at bottom, black 40%, transparent 80%)',
@@ -109,7 +110,7 @@ export default function GlobeFooter() {
         {/* SECTION 2: Stats Card (Image 2) */}
         <div className="w-full min-h-screen flex items-center relative pb-32">
           <div className="ml-[10%] lg:ml-[20%] xl:ml-[25%] pointer-events-none mt-[10vh]">
-            <div className="bg-[#fdf8f0] text-[#111111] p-8 md:p-12 pb-16 w-[300px] md:w-[380px] rounded-sm transform -rotate-2 shadow-2xl relative">
+            <div className="bg-[#fdf8f0] text-[#111111] p-8 md:p-12 pb-16 w-[300px] md:w-[380px] rounded-sm shadow-2xl relative">
               <h3 className="text-6xl md:text-7xl font-sans font-medium tracking-tighter leading-[0.9] mb-8">5K+<br/>flights</h3>
               <p className="text-[9px] md:text-[10px] uppercase font-bold tracking-widest border-t border-black/10 pt-4 mb-24">Successfully arranged</p>
               

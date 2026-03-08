@@ -5,19 +5,23 @@ import { useEffect, useState } from 'react';
 const benefits = [
   {
       title: "Pets",
-      desc: "Traveling with pets on a private jet means comfort and peace of mind for both owners and their companions. Our dedicated team ensures seamless arrangements, from documentation and safety to onboard care, so that your pet enjoys the same level of attention and luxury as you do. Every detail is managed to create a stress-free and enjoyable journey for everyone on board."
+      desc: "Traveling with pets on a private jet means comfort and peace of mind for both owners and their companions. Our dedicated team ensures seamless arrangements, from documentation and safety to onboard care, so that your pet enjoys the same level of attention and luxury as you do. Every detail is managed to create a stress-free and enjoyable journey for everyone on board.",
+      image: "https://images.unsplash.com/photo-1544568100-847a948585b9?q=80&w=1974&auto=format&fit=crop"
   },
   {
       title: "24/7 availability",
-      desc: "Our team is available around the clock to handle any request, no matter the time zone or urgency. From last-minute flight arrangements to personalized services, we provide seamless support whenever you need it."
+      desc: "Our team is available around the clock to handle any request, no matter the time zone or urgency. From last-minute flight arrangements to personalized services, we provide seamless support whenever you need it.",
+      image: "https://images.unsplash.com/photo-1556388158-158ea5ccacbd?q=80&w=2070&auto=format&fit=crop"
   },
   {
       title: "Onboard services",
-      desc: "Every flight is tailored with a range of personalized onboard services designed to elevate your journey. From fine dining and curated entertainment to attentive crew and seamless connectivity."
+      desc: "Every flight is tailored with a range of personalized onboard services designed to elevate your journey. From fine dining and curated entertainment to attentive crew and seamless connectivity.",
+      image: "https://images.unsplash.com/photo-1559827260-36ca18084ec4?q=80&w=2070&auto=format&fit=crop"
   },
   {
       title: "Efficient",
-      desc: "Efficiency is at the core of every flight we operate. From optimized routes and streamlined procedures to quick boarding and smooth ground handling, we make sure your time is always used wisely."
+      desc: "Efficiency is at the core of every flight we operate. From optimized routes and streamlined procedures to quick boarding and smooth ground handling, we make sure your time is always used wisely.",
+      image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=2000&auto=format&fit=crop"
   }
 ];
 
@@ -57,7 +61,7 @@ export default function Benefits() {
                     onClick={() => setOpenIndex(i === openIndex ? -1 : i)}
                     className="w-full flex justify-between items-center text-left focus:outline-none group"
                   >
-                    <h3 className="text-[1.75rem] md:text-4xl lg:text-[2.5rem] font-medium tracking-tight pr-8 text-[#111111] group-hover:text-[#111111]/70 transition-colors">
+                    <h3 className="text-[1.75rem] md:text-4xl lg:text-[2rem] font-medium tracking-tight pr-8 text-[#111111] group-hover:text-[#111111]/70 transition-colors">
                       {item.title}
                     </h3>
                     <div className="relative w-6 h-6 flex items-center justify-center shrink-0">
@@ -103,15 +107,18 @@ export default function Benefits() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="relative w-full aspect-[4/5] lg:aspect-auto lg:h-[700px] xl:h-[800px] overflow-hidden bg-[#e0dcd5] rounded-sm"
           >
-            {/* 
-               Using a realistic private jet interior with dog placeholder,
-               as this replaces the generic 'A Better Way To Fly' grid.
-            */}
-            <img 
-               src="https://images.unsplash.com/photo-1544568100-847a948585b9?q=80&w=1974&auto=format&fit=crop" 
-               alt="Pet friendly private jet interior" 
-               className="w-full h-full object-cover object-center filter grayscale-[10%] brightness-95"
-            />
+            <AnimatePresence mode="wait">
+              <motion.img 
+                 key={openIndex !== -1 ? openIndex : 'closed'}
+                 initial={{ opacity: 0 }}
+                 animate={{ opacity: 1 }}
+                 exit={{ opacity: 0 }}
+                 transition={{ duration: 0.4, ease: "easeInOut" }}
+                 src={benefits[openIndex !== -1 ? openIndex : 0].image} 
+                 alt={benefits[openIndex !== -1 ? openIndex : 0].title} 
+                 className="absolute inset-0 w-full h-full object-cover object-center filter grayscale-[10%] brightness-95"
+              />
+            </AnimatePresence>
           </motion.div>
         </div>
 

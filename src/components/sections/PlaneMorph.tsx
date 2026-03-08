@@ -87,7 +87,7 @@ export default function PlaneMorph() {
         {/* Global Stats Outline Sequence */}
         <motion.div 
           style={{ opacity: statsOpacity }}
-          className="absolute inset-0 z-10 flex flex-col items-center justify-center pointer-events-none mix-blend-difference text-[#e8e8e8]"
+          className="absolute inset-0 z-10 flex flex-col items-center justify-center pointer-events-none text-[#e8e8e8]"
         >
            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 w-full max-w-[1720px] mx-auto px-6 md:px-12 h-full py-24 pb-[15vh]">
               

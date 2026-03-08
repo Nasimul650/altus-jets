@@ -44,15 +44,20 @@ export default function HeroScroll({ children }: { children?: React.ReactNode })
           >
             {/* Center Background Text removed and placed in Header.tsx for scroll animation */}
 
-            <div className="h-full flex flex-col justify-between pt-40 md:pt-56 pb-12 md:pb-16 relative">
-              {/* Top Title Section */}
-              <div className="w-full flex justify-between items-center text-white font-sans shrink-0 pointer-events-none">
-                <h1 className="text-6xl md:text-8xl lg:text-[110px] tracking-tighter leading-[0.9] font-medium z-10">We are<br/>movement</h1>
-                <h2 className="text-6xl md:text-8xl lg:text-[110px] tracking-tighter leading-[0.9] font-medium text-right z-10">We are<br/>distinction</h2>
-              </div>
+            <div className="h-full w-full relative pointer-events-none">
+              
+              {/* Top/Middle Left Title */}
+              <h1 className="absolute left-0 top-[22%] text-6xl md:text-8xl lg:text-[110px] tracking-tighter leading-[0.9] font-medium text-white z-10">
+                We are<br/>movement
+              </h1>
+              
+              {/* Bottom/Middle Right Title */}
+              <h2 className="absolute right-0 top-[52%] lg:top-[58%] text-6xl md:text-8xl lg:text-[110px] tracking-tighter leading-[0.9] font-medium text-white text-right z-10">
+                We are<br/>distinction
+              </h2>
 
               {/* Bottom Description */}
-              <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-8 items-end relative z-10">
+              <div className="absolute bottom-8 lg:bottom-12 left-0 right-0 w-full grid grid-cols-1 lg:grid-cols-12 gap-8 items-end z-10 pointer-events-auto">
                 {/* Left Bottom */}
                 <div className="lg:col-span-4 flex flex-col gap-6 font-sans">
                   <h3 className="text-2xl md:text-[32px] font-medium leading-tight text-white mb-2">Your<br/>freedom to<br/>enjoy life</h3>
@@ -62,10 +67,8 @@ export default function HeroScroll({ children }: { children?: React.ReactNode })
                   </p>
                 </div>
 
-                {/* Center Buttons removed for floating button */}
-
                 {/* Right Bottom */}
-                <div className="lg:col-span-4 lg:col-start-9 flex flex-col justify-end w-full pb-8">
+                <div className="lg:col-span-4 lg:col-start-9 flex flex-col justify-end w-full pb-0 lg:pb-8">
                   <div className="w-full h-[1px] bg-white/40 mb-6"></div>
                   <div className="flex justify-between items-center text-[10px] tracking-widest uppercase font-bold text-white font-sans w-full">
                     <button 
