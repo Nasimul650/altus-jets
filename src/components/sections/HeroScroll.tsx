@@ -42,10 +42,7 @@ export default function HeroScroll({ children }: { children?: React.ReactNode })
             style={{ opacity: textOpacity, y: textY }}
             className="absolute inset-0 z-10 w-full max-w-[1720px] mx-auto px-6 md:px-12 pointer-events-auto"
           >
-            {/* Center Background Text */}
-            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-              <span className="text-white text-3xl md:text-5xl tracking-[0.2em] font-light transform -translate-y-8 uppercase">Altus Jets</span>
-            </div>
+            {/* Center Background Text removed and placed in Header.tsx for scroll animation */}
 
             <div className="h-full flex flex-col justify-between pt-40 md:pt-56 pb-12 md:pb-16 relative">
               {/* Top Title Section */}
