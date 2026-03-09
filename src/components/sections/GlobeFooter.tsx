@@ -1,6 +1,6 @@
 'use client';
-import { motion, useMotionValueEvent, useScroll, useTransform } from 'framer-motion';
-import { useRef, useState } from 'react';
+import { motion, useScroll } from 'framer-motion';
+import { useEffect, useRef, useState } from 'react';
 
 export default function GlobeFooter() {
   const containerRef = useRef<HTMLElement>(null);
@@ -9,25 +9,20 @@ export default function GlobeFooter() {
     offset: ["start end", "end start"]
   });
 
-  // Vertical scrolling translation for the list of cities
-  const y = useTransform(scrollYProgress, [0, 1], [0, -400]);
-  
-  // Track current selected index based on scroll position
-  const [activeIndex, setActiveIndex] = useState(4); // Tel Aviv
-  
-  useMotionValueEvent(scrollYProgress, "change", (latest) => {
-    // Map scroll progress (0..1) to an index (0..cities.length-1)
-    // The list is active early in the animation
-    const progress = Math.max(0, Math.min(1, (latest - 0.1) * 3)); 
-    const index = Math.floor(progress * cities.length);
-    setActiveIndex(Math.min(index, cities.length - 1));
-  });
-
   const cities = [
     "Paris", "Mexico City", "Miami", "Nice", "Tel Aviv", 
     "Cairo", "Dubai", "Doha", "Bangkok", "London", 
     "Tokyo", "New York", "Singapore"
   ];
+
+  const [cityIndex, setCityIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCityIndex((prev) => (prev + 1) % cities.length);
+    }, 2000);
+    return () => clearInterval(interval);
+  }, [cities.length]);
 
   return (
     <section id="global" ref={containerRef} className="relative w-full bg-[#111111] text-[#e8e8e8]">
@@ -76,15 +71,16 @@ export default function GlobeFooter() {
                 </div>
               </div>
 
-              {/* Vertical Scroll List styling with exact text/fading */}
-              <div className="relative h-[250px] overflow-hidden mask-fade-vertical flex flex-col justify-center pr-12 w-[200px]">
-                 <motion.div 
-                   style={{ y }}
-                   className="flex flex-col gap-4 text-xl md:text-2xl lg:text-3xl font-sans tracking-tight font-medium absolute top-[50%] flex-col items-start"
+              {/* Vertical Scroll List style with fading */}
+              <div className="relative h-[250px] overflow-hidden mask-fade-vertical flex flex-col justify-center pr-12 w-[200px] md:w-[250px]">
+                 <motion.div
+                   animate={{ y: -(cityIndex * 48) }}
+                   transition={{ duration: 0.8, ease: [0.32, 0.72, 0, 1] }}
+                   className="flex flex-col absolute top-[50%] mt-[-24px] items-start w-full"
                  >
                    {cities.map((city, index) => {
                      // Determine styling based on distance from active index
-                     const distance = Math.abs(index - activeIndex);
+                     const distance = Math.abs(index - cityIndex);
                      const isTarget = distance === 0;
                      const isAdjacent1 = distance === 1;
                      const isAdjacent2 = distance === 2;
@@ -97,7 +93,7 @@ export default function GlobeFooter() {
                      else if (isAdjacent3) opacityClass = "text-white/10";
 
                      return (
-                       <div key={index} className={`transition-all duration-300 ${opacityClass}`}>
+                       <div key={index} className={`transition-all duration-500 h-[48px] flex items-center text-xl md:text-2xl lg:text-3xl font-sans tracking-tight font-medium whitespace-nowrap ${opacityClass}`}>
                          {city}
                        </div>
                      );
