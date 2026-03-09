@@ -90,7 +90,7 @@ export default function HeroScroll({ children }: { children?: React.ReactNode })
         </div>
       </section>
 
-      <div className="relative z-10 bg-gradient-to-t from-[#050505] via-[#050505]/90 to-transparent pt-32">
+      <div className="relative z-10 bg-gradient-to-t from-[#575252] via-[#5e5b5b]/90 to-transparent pt-32">
         {children}
       </div>
     </div>

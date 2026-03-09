@@ -105,7 +105,7 @@ export default function Benefits() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="relative w-full aspect-[4/5] lg:aspect-auto lg:h-[700px] xl:h-[800px] overflow-hidden bg-[#e0dcd5] rounded-sm"
+            className="relative w-5/6 aspect-[4/5] lg:aspect-auto lg:h-[500px] xl:h-[650px] overflow-hidden bg-[#e0dcd5] rounded-sm"
           >
             <AnimatePresence mode="wait">
               <motion.img 
