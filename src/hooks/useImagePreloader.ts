@@ -43,7 +43,7 @@ export function useImagePreloader(
         return () => {
             isCancelled = true;
         };
-    }, [basePath, frameCount, padLength]);
+    }, [basePath, frameCount, padLength, extension, prefix]);
 
     return { images, loading };
 }
